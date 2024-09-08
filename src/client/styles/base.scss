@@ -1,0 +1,41 @@
+$primary-color: #ff6f61;
+$secondary-color: #ffe4c4;
+$text-color: #2d3436;
+$background-color: #f0f4f7;
+$button-hover-color: #ff3b2f;
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+button {
+    padding: 12px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $button-hover-color;
+    }
+}
+img {
+    max-width: 100%;  
+    height: auto;     
+}

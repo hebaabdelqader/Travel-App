@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Your Trip</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Plan Your Adventure</h1>
+        </header>
+        <form id="travel-form">
+            <label for="location">Where to?</label>
+            <input type="text" id="location" name="location" placeholder="Enter destination" required>
+
+            <label for="start-date">Start Your Journey:</label>
+            <input type="date" id="start-date" name="start-date" required>
+
+            <label for="end-date">Return Date:</label>
+            <input type="date" name="end-date" id="end-date" required>
+
+            <button type="submit">Explore Now</button>
+        </form>
+
+        <div id="trip-info"></div>
+    </div>
+    <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function (registration) {
+              console.log(
+                "Service Worker has been successfully registered with scope: ",
+                registration.scope
+              );
+            })
+            .catch(function (error) {
+              console.error("Service Worker registration failed. Error: ", error);
+            });
+        }
+      </script>
+      
+</body>
+</html>

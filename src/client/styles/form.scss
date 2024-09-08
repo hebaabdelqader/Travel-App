@@ -1,0 +1,39 @@
+form {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: $secondary-color;
+    border-radius: 8px;
+
+    label {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 0.75rem;
+        border: 2px solid $primary-color;
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: white;
+        color: $text-color;
+
+        &:focus {
+            border-color: $button-hover-color;
+            outline: none;
+        }
+    }
+
+    button {
+        margin-top: 1rem;
+        padding: 0.75rem;
+        font-size: 1rem;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 1rem;
+    }
+}
